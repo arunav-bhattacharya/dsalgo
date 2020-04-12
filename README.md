@@ -1,6 +1,6 @@
 # Data Structures & Algorithms
 
-> This is a repo of most commonly used Data Structures & Algorithms written in Java, and can be a useful guide for getting upto speed for product based company interviews. The repo is currently in progress. The topics that are present is marked as complete here. Below is the list of topics that are being covered -
+> This is a repo of most commonly used Data Structures & Algorithms written in Java 8, and can also be a used as a guide for preparing for product based company interviews. The repo is currently in progress. The topics that are present is marked as complete -
 
 ## Topics
 

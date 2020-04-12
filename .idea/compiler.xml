@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="3-stack" />
+        <module name="5-linkedlists" />
+        <module name="14-tries" />
+        <module name="7-advancedsort" />
+        <module name="13-advancedgraphs" />
+        <module name="12-graphs" />
+        <module name="10-heap" />
+        <module name="8-binarysearchtree" />
+        <module name="16-unionfind" />
+        <module name="15-substringsearch" />
+        <module name="2-simplesort" />
+        <module name="9-balancedsearchtree" />
+        <module name="11-hashtables" />
+        <module name="4-queues" />
+        <module name="6-recursion" />
+        <module name="1-arrays" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1-arrays" target="8" />
+      <module name="10-heap" target="8" />
+      <module name="11-hashtables" target="8" />
+      <module name="12-graphs" target="8" />
+      <module name="13-advancedgraphs" target="8" />
+      <module name="14-tries" target="8" />
+      <module name="15-substringsearch" target="8" />
+      <module name="16-unionfind" target="7" />
+      <module name="2-simplesort" target="8" />
+      <module name="3-stack" target="8" />
+      <module name="4-queues" target="8" />
+      <module name="5-linkedlists" target="8" />
+      <module name="6-recursion" target="8" />
+      <module name="7-advancedsort" target="8" />
+      <module name="8-binarysearchtree" target="8" />
+      <module name="9-balancedsearchtree" target="8" />
+      <module name="dsalgo" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
