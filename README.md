@@ -17,10 +17,18 @@
 - [ ] Random Shuffle
 
 ### 2 Simple Sorting
-- [x] Bubble Sort
-- [x] Selection Sort
-- [x] Insertion Sort
-- [ ] Sorting Objects
+- [x] **Bubble Sort**
+    - Array is sorted from the end.
+    - Iterate through the array to compare 2 successive elements to check LHS > RHS. If yes, swap them.
+    - Largest element goes to the right hand side after each iteration.
+- [x] **Selection Sort**
+    - Array is sorted from the front
+    - Iterate through the array to find the shortest element and bring it to the front of the array.
+- [x] **Insertion Sort**
+    - From start to end there is only one iteration.
+    - During each iteration, each element is compared with previous element.
+    - If LHS > RHS, then we can swap until it is placed in the correct position.
+- [ ] **Sorting Objects**
 
 ### 3 Stack
 - [x] Stack implementation using Array
@@ -61,7 +69,31 @@
 - [x] Shell Sort using Comparable
 - [x] Quick/Partition Sort using Comparator
     
-### 8 Binary Search Trees
+### 8 Binary Search Trees (BST)
+
+#### Binary Tree
+
+- Height of a Tree
+- Level of a Tree
+
+#### Strict Binary Tree
+
+#### N-ary Tree
+
+#### Strict N-ary Tree
+
+#### Representation of Binary Tree
+- Array
+- Linked List
+
+#### Tree Traversals
+- Pre-Order
+- In-Order
+- Post-Order
+- Level-Order
+
+#### Implementation of BST 
+
 - [x] Implement Binary Search Tree using Linked List
     -  [x] Insertion
     -  [x] Search
@@ -82,6 +114,40 @@
     - [ ] Huffman Coding for keys compression
 
 ### 9 Balanced Search Trees
+
+#### 2-3 Tree
+
+#### 2-3-4 Tree
+
+#### AVL Tree
+
+#### Red-Black Trees
+- It is a height balanced BST
+
+1. Every node is either Red or Black.
+2. Root is always Black.
+3. Null child is also Black.   
+4. If node is Red, children must be Black. No two consecutive red nodes can exist. Parent and children of Red Node is always Black for balanced Red-Black Tree.
+5. Every path from root to leaf-node or null-child, must contain same number of black nodes, i.e. the black height should be the same.
+6. New inserted node is Red. If there is any violation after insertion, then fix it using the below mentioned rules.
+7. Height of Red-Black Tree is `log N <= height <= 2 log N`
+
+##### Fixing Rule violations in Red-Black Tree:
+- Re-color/Change the color of the nodes
+- Perform rotations (LL, LR, RR, RL)
+
+#### Implementation of Balanced Search Trees 
+
+- [ ] *Implement 2-3 Tree (Not mandatory)*
+    - [ ] Insertion
+    - [ ] Search
+    - [ ] Deletion
+    - [ ] Display
+- [ ] *Implement 2-3-4 Tree (Not mandatory)*
+    - [ ] Insertion
+    - [ ] Search
+    - [ ] Deletion
+    - [ ] Display
 - [x] *Implement AVL Tree (Not mandatory)* 
     - [x] Insertion
     - [x] Search
@@ -92,16 +158,6 @@
     - [x] Search
     - [ ] Deletion
     - [x] Display
-- [ ] *Implement 2-3 Tree (Not mandatory)* 
-    - [ ] Insertion
-    - [ ] Search
-    - [ ] Deletion
-    - [ ] Display
-- [ ] *Implement 2-3-4 Tree (Not mandatory)* 
-    - [ ] Insertion
-    - [ ] Search
-    - [ ] Deletion
-    - [ ] Display
 - [ ] *Implement Interval Search Tree (Not mandatory)* 
     - [ ] Insertion
     - [ ] Search
@@ -109,6 +165,51 @@
     - [ ] Display
              
 ### 10 Heaps
+> Heaps need to satisfy the Heap condition, which states each nodes key is going to be greater than or equal to the keys of its children (for Max Heap and vice-versa for Min Heap).
+
+#### Properties of Heap:
+- Heap is a complete Binary Tree
+- For Max Heap, every node/element/key should be greater than or equal to its children.
+- For Min Heap, every node/element/key should be lesser than or equal to its children.
+- Height of complete Binary Tree is always `log N`.
+- Heap represented using an array, for a parent node of index `i`, the child nodes can be accessed using the following formula -
+    - `leftChild = 2*i + 1`
+    - `rightChild = 2*i + 2`
+- Similarly, parent of a child node `i` can be accessed using the following formula -
+    - `parent = (i-1)/2 //rounded of to the lowest int`
+
+#### Insertion in Max Heap
+
+For a Heap represented using array, the following process is followed for insertion of a new element in the heap - 
+- New element will be inserted at the end of the array.
+- Re-arrange the elements in the Heap by moving up the higher element to the top until, until all children in the heap is smaller than the parent.
+- Time complexity of the operation is `O(logN)`.  
+- During insert, _largest element is moved from leaf to root_.
+
+#### Deletion in Max Heap
+
+Again for a Heap represented using array, the largest element can be deleted using a similar process.
+- The topmost element (or root) in the heap (the first element in the array) is deleted.
+- After deletion the last element in the array will take the position of the root.
+- Re-arrange the elements following the binary heap rule, i.e., moving the highest element to the top so that all the nodes in heap is greater than equal to its children.
+- Time complexity of the operation is `O(logN)`.
+- During delete, _smallest element is moved from root to leaf_.
+
+#### Heap Sort
+
+- The deleted element from the heap can be added to the end of the array.
+- After deleting all the elements in the array and moving it to the end of the array, the array becomes sorted.
+- Since each delete operation in heap takes `O(logN)`, so for performing delete operations on `N` elements to make the array sorted, the total time complexity for Heap sort is `O(NlogN)`.
+
+#### Heapify
+
+- Heapify is a fast way of creating a heap.
+- Whenever insertion is performed, check for a valid heap for all nodes starting from the leaf node.
+- Once leaf node is validated, check for its parents as well until the root node.
+- Since each insert operation in heap takes `O(logN)`, so for performing insert operations on `N` elements to build the heap, the total time complexity for Heapify for `N` elements is `O(NlogN)`.
+
+#### Implementation of Heap:
+  
 - [x] Implement using Array
     -  Insertion
     -  Search
@@ -119,6 +220,34 @@
 - [x] Create a Heap using Heapify 
 
 ### 11 Hash Tables
+
+#### Hashing & Hash-Function
+
+#### Hash-Collision
+
+#### Hashing Technique
+
+- Open Hashing
+  - Chaining
+- Closed Hashing
+  - Open addressing
+    - Linear Probing
+    - Quadratic Probing
+    - Double Hashing
+  
+#### Chaining
+
+#### Linear Probing
+
+#### Quadratic Probing
+
+#### Double Hashing
+
+#### Hash Functions
+- Mod
+- Mid Square
+- Folding
+
 - [x] Implement using Array - Linear Probing
     -  Insertion
     -  Search

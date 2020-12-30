@@ -6,22 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="3-stack" />
-        <module name="5-linkedlists" />
-        <module name="14-tries" />
         <module name="7-advancedsort" />
-        <module name="13-advancedgraphs" />
-        <module name="12-graphs" />
-        <module name="10-heap" />
-        <module name="8-binarysearchtree" />
         <module name="16-unionfind" />
+        <module name="1-arrays" />
+        <module name="6-recursion" />
+        <module name="8-binarysearchtree" />
+        <module name="14-tries" />
+        <module name="11-hashtables" />
+        <module name="12-graphs" />
+        <module name="4-queues" />
         <module name="15-substringsearch" />
         <module name="2-simplesort" />
         <module name="9-balancedsearchtree" />
-        <module name="11-hashtables" />
-        <module name="4-queues" />
-        <module name="6-recursion" />
-        <module name="1-arrays" />
+        <module name="13-advancedgraphs" />
+        <module name="5-linkedlists" />
+        <module name="3-stack" />
+        <module name="10-heap" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
