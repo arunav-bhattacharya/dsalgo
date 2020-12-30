@@ -182,7 +182,7 @@
 
 For a Heap represented using array, the following process is followed for insertion of a new element in the heap - 
 - New element will be inserted at the end of the array.
-- Re-arrange the elements in the Heap by moving up the higher element to the top until, until all children in the heap is smaller than the parent.
+- Re-arrange the elements in the Heap by moving up the higher element to the top, until all children in the heap is smaller than the parent.
 - Time complexity of the operation is `O(logN)`.  
 - During insert, _largest element is moved from leaf to root_.
 
@@ -247,6 +247,8 @@ Again for a Heap represented using array, the largest element can be deleted usi
 - Mod
 - Mid Square
 - Folding
+
+#### Implementation
 
 - [x] Implement using Array - Linear Probing
     -  Insertion
