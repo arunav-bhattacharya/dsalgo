@@ -184,7 +184,7 @@ For a Heap represented using array, the following process is followed for insert
 - New element will be inserted at the end of the array.
 - Re-arrange the elements in the Heap by moving up the higher element to the top, until all children in the heap is smaller than the parent.
 - Time complexity of the operation is `O(logN)`.  
-- During insert, _largest element is moved from leaf to root_.
+- During insert the _direction of adjustment is from **leaf to root**_.
 
 #### Deletion in Max Heap
 
@@ -193,7 +193,7 @@ Again for a Heap represented using array, the largest element can be deleted usi
 - After deletion the last element in the array will take the position of the root.
 - Re-arrange the elements following the binary heap rule, i.e., moving the highest element to the top so that all the nodes in heap is greater than equal to its children.
 - Time complexity of the operation is `O(logN)`.
-- During delete, _smallest element is moved from root to leaf_.
+- During delete the _direction of adjustment is from **root to leaf**_.
 
 #### Heap Sort
 
@@ -206,7 +206,7 @@ Again for a Heap represented using array, the largest element can be deleted usi
 - Heapify is a fast way of creating a heap.
 - Whenever insertion is performed, check for a valid heap for all nodes starting from the leaf node.
 - Once leaf node is validated, check for its parents as well until the root node.
-- Since each insert operation in heap takes `O(logN)`, so for performing insert operations on `N` elements to build the heap, the total time complexity for Heapify for `N` elements is `O(NlogN)`.
+- Effectively the comparison needs to be done for half of the elements as all the leaf nodes in its own is a valid heap and so we can ignore them for doing the comparison.  
 
 #### Implementation of Heap:
   
