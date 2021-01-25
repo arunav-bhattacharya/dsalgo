@@ -291,6 +291,13 @@ Again for a Heap represented using array, the largest element can be deleted usi
     - [x] Strongly connected components
         - [x] Kosaraju-Sharir's Algorithm
 
+- [Topological Sort](https://www.youtube.com/watch?v=ddTC4Zovtbc)
+- [Cycle Detection in Directed Graph](https://www.youtube.com/watch?v=AK7BuT5MgU0)
+- [Cycle Detection in Un-Directed Graph](https://www.youtube.com/watch?v=n_t0a_8H8VY)
+- [Strongly Connected Components - Kosaraju-Sharir Algorithm](https://www.youtube.com/watch?v=RpgcYiky7uw)
+- [Find all Bridges in a Undirected Graph - Tarjan's Algorithm](https://www.youtube.com/watch?v=CsGP_s_3GWg)
+
+
 ### 13 Advanced Graph Algorithms
 - [x] Edge-Weighted Digraph
     - [x] Representation                           
