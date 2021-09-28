@@ -87,6 +87,7 @@ public class BinarySearchTree {
         Node parentNode = root;
         boolean isLeftChild = false;
 
+        // 1. Search through the binary search tree for the node and maintain parent and current node references
         while (currentNode.getKey() != key) {
             parentNode = currentNode;
             if (key < currentNode.getKey()) {
@@ -99,6 +100,10 @@ public class BinarySearchTree {
             if (currentNode == null)
                 return false;
         }
+
+        // 2.a. When the current node to delete is a leaf node, then the respective child node reference (left or
+        // right) of parent node will be set to null
+
         /* Delete a node that is a leaf node */
         if (null == currentNode.getRightChild() && null == currentNode.getLeftChild()) {
             if (currentNode == root)
@@ -109,6 +114,11 @@ public class BinarySearchTree {
                 parentNode.setRightChild(null);
             return true;
         }
+
+        // 2.b. When the current node has a single child, then the parent node needs to point to the corresponding
+        // child
+        // of the current node
+
         /* Delete a node that has one child */
         /* When no right child, replace with left subtree */
         if (null == currentNode.getRightChild() && null != currentNode.getLeftChild()) {
@@ -130,6 +140,14 @@ public class BinarySearchTree {
                 parentNode.setRightChild(currentNode.getRightChild());
             return true;
         }
+
+        // 2.c. When the current node is 2 children, then get the Inorder Successor (or Inorder Predecessor) of the
+        // which will take the place of the current node to delete. When inorder successor is retrieved then the left
+        // child of the node to delete will become the left child of the successor. The right child is little tricky.
+        // If right child of node to delete is the successor then no more changes are required.
+        // But if that is not the case, the right child of the successor will become the left child of the right
+        // child of node to delete (i.e. left child of the parent of successor).
+
         /* Delete a node that has two children */
         if (null != currentNode.getRightChild() && null != currentNode.getLeftChild()) {
             Node successor = getSuccessor(currentNode);
@@ -148,7 +166,10 @@ public class BinarySearchTree {
     private Node getSuccessor(Node nodeToDelete) {
         Node successorParentNode = nodeToDelete;
         Node successor = nodeToDelete;
+        // Initially go right once
         Node currentNode = nodeToDelete.getRightChild();
+
+        // Then go left to find the node with no more left child
         while (currentNode != null) {
             successorParentNode = successor;
             successor = currentNode;
@@ -326,21 +347,19 @@ public class BinarySearchTree {
         while (!stack.isEmpty()) {
             current = stack.peek();
             if (previous == null || previous.getLeftChild() == current || previous.getRightChild() == current) {
-                if (current.getLeftChild() != null) {
+                if (current.getLeftChild() != null)
                     stack.push(current.getLeftChild());
-                } else if (current.getRightChild() != null)
+                else if (current.getRightChild() != null)
                     stack.push(current.getRightChild());
-                else {
+                else
                     System.out.println(stack.pop().getKey());
-                }
             } else if (current.getLeftChild() == previous) {
                 if (current.getRightChild() != null)
                     stack.push(current.getRightChild());
                 else
                     System.out.println(stack.pop().getKey());
-            } else if (current.getRightChild() == previous) {
+            } else if (current.getRightChild() == previous)
                 System.out.println(stack.pop().getKey());
-            }
             previous = current;
         }
     }

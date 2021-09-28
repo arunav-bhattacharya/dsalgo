@@ -5,9 +5,9 @@ public class AdvancedSortApp {
     private static int[] array = {99, 7, 8, 92, 23, 0, 23, 92, 56, 99, 7, 16};
 
     public static void main(String[] args) {
-        testShellSort();
+//        testShellSort();
         //testMergeSort();
-        //testQuickSort();
+        testQuickSort();
     }
 
     private static void testShellSort() {

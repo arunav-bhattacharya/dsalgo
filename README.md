@@ -312,6 +312,17 @@ Again for a Heap represented using array, the largest element can be deleted usi
     - [ ] Ford-Fulkerson
     
 ### 14 Tries
+
+#### Properties
+
+- Tries are similar to Graphs, as they are a combination of nodes where each node represents a unique alphabet.
+- Tries are more like ordered trees where each of the children can either be Null or points to a node.
+- The size of the Trie depends upon the number of letters. For example, in English there are 26 letters, so the size of a Trie node cannot exceed 26.
+- The depth of a Trie depends on the longest word that it stores.
+- Another important property of Tries is that they provide the same path for words that share a common prefix. For example, “there” and “their” have a common prefix “the”, so they will share the same path till “e”. After that, they will be divided into two branches. The whole working of Trie depends on this property, so we will discuss this later in detail.
+
+
+#### Implementation 
 - [x] Representation
     - [x] Using Arrays
     - [x] Using HashMap

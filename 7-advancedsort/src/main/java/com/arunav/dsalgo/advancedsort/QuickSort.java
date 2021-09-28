@@ -1,5 +1,7 @@
 package com.arunav.dsalgo.advancedsort;
 
+import java.util.Random;
+
 public class QuickSort {
 
     public QuickSort() {
@@ -13,7 +15,20 @@ public class QuickSort {
 
     public void sort(int[] array) {
         System.out.println("Array Length= " + array.length);
+        System.out.println("Before Shuffle");
+        display(array);
+        shuffle(array);
+        System.out.println("After Shuffle");
+        display(array);
         qsort(array, 0, array.length - 1);
+    }
+
+    private void shuffle(int[] array) {
+        Random random = new Random();
+        for(int i=0; i < array.length; i++){
+            int randomIdx = random.nextInt(array.length);
+            swap(array, i, randomIdx);
+        }
     }
 
     private void qsort(int[] array, int low, int high) {
